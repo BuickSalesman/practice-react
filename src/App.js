@@ -9,7 +9,7 @@ function App() {
       {/* <Accordion /> */}
 
       {/* Random color component */}
-      <RandomColor />
+      {/* <RandomColor /> */}
     </div>
   );
 }
