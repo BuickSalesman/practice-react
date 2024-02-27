@@ -1,5 +1,6 @@
 import "./App.css";
 import Accordion from "./components/accordion";
+import TabTest from "./components/custom-tabs/tabs-test";
 import ImageSlider from "./components/image-slider";
 import LightDarkMode from "./components/light-dark-mode";
 import LoadMoreData from "./components/load-more-data";
@@ -39,6 +40,9 @@ function App() {
 
       {/* Scoll indicator component */}
       {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
+
+      {/* Custome tabs component */}
+      <TabTest />
     </div>
   );
 }
