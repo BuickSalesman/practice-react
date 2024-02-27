@@ -27,7 +27,7 @@ function App() {
       {/* <ImageSlider url={"https://picsum.photos/v2/list"} page={"1"} limit={"20"} /> */}
 
       {/* Load more products component */}
-      {/* <LoadMoreData /> */}
+      <LoadMoreData />
 
       {/* Tree view component/menu UI component */}
       {/* <TreeView menus={menus} /> */}
@@ -42,7 +42,7 @@ function App() {
       {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
 
       {/* Custome tabs component */}
-      <TabTest />
+      {/* <TabTest /> */}
     </div>
   );
 }
