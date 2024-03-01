@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import User from "./user";
+import "./styles.css";
 
 export default function GithubProfileFinder() {
   const [userName, setUserName] = useState("ygref");
@@ -16,8 +17,6 @@ export default function GithubProfileFinder() {
       setLoading(false);
       setUserName("");
     }
-
-    console.log(data);
   }
 
   function handleSubmit() {
