@@ -19,14 +19,17 @@ export default function ModalTest() {
       {showModalPopup && (
         <Modal
           id={"custom-id"}
-          header={<h1>Custom Header</h1>}
-          footer={<h1>Custom Footer</h1>}
+          header={
+            <h1>
+              Hello
+              <p>my name is</p>
+            </h1>
+          }
+          footer={<h1></h1>}
           onClose={onClose}
-          body={<div>Custom body</div>}
+          body={<div>Slim Shady</div>}
         />
       )}
     </div>
   );
 }
-
-// RETURN TO VIDEO AT 3:12:00
