@@ -1,3 +1,28 @@
+// export default function Modal({ id, header, body, footer, onClose }) {
+//   return (
+//     <div id={id || "Modal"} className="modal">
+//       <div className="modal-content">
+//         <div className="header">
+//           <span onClick={onClose} className="close-modal-icon">
+//             &times;
+//           </span>
+//           <h1>{header ? header : "Header"}</h1>
+//         </div>
+//         <div className="body">
+//           {body ? (
+//             body
+//           ) : (
+//             <div>
+//               <p>This is our modal body</p>
+//             </div>
+//           )}
+//         </div>
+//         <div className="footer">{footer ? footer : <h2>Footer</h2>}</div>
+//       </div>
+//     </div>
+//   );
+// }
+
 export default function Modal({ id, header, body, footer, onClose }) {
   return (
     <div id={id || "Modal"} className="modal">
@@ -6,7 +31,7 @@ export default function Modal({ id, header, body, footer, onClose }) {
           <span onClick={onClose} className="close-modal-icon">
             &times;
           </span>
-          <h1>{header ? header : "Header"}</h1>
+          <div>{header ? header : <h1>Header</h1>}</div>
         </div>
         <div className="body">
           {body ? (

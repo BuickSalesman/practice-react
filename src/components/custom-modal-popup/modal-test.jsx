@@ -18,6 +18,7 @@ export default function ModalTest() {
       <button onClick={handleToggleModalPopup}>Open Modal</button>
       {showModalPopup && (
         <Modal
+          id={"custom-id"}
           header={<h1>Custom Header</h1>}
           footer={<h1>Custom Footer</h1>}
           onClose={onClose}
