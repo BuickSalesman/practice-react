@@ -6,7 +6,7 @@ export default function Modal({ id, header, body, footer, onClose }) {
           <span onClick={onClose} className="close-modal-icon">
             &times;
           </span>
-          <h2>{header ? header : "Header"}</h2>
+          <h1>{header ? header : "Header"}</h1>
         </div>
         <div className="body">
           {body ? (

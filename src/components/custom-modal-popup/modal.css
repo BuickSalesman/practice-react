@@ -22,7 +22,7 @@
 }
 
 .close-modal-icon{
-  justify-content: center;
+  /* justify-content: center; */
   cursor: pointer;
   font-size: 40px;
   float: right;
@@ -30,7 +30,6 @@
 }
 
 .header{
-  justify-content: center;
   padding: 4px 16px;
   background-color: blue;
   color: white;
