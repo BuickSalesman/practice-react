@@ -37,7 +37,7 @@ export default function GithubProfileFinder() {
         <input
           name="search-by-username"
           type="text"
-          placeholder="Search Github Useername..."
+          placeholder="Github Username..."
           value={userName}
           onChange={(event) => setUserName(event.target.value)}
         />
