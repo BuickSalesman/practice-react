@@ -47,7 +47,7 @@ function App() {
       {/* <TabTest /> */}
 
       {/* Custom Modal Component  */}
-      <ModalTest />
+      {/* <ModalTest /> */}
 
       {/* Github profile finder */}
       {/* <GithubProfileFinder /> */}
