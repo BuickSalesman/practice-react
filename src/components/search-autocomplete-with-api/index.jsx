@@ -7,14 +7,25 @@ export default function SearchAutocomplete() {
 
   async function fetchListOfUsers() {
     try {
+      setLoading(true);
+      const response = await fetch("https://dummyjson.com/users");
+      const data = await response.json();
+
+      console.log(data);
+      if (data && data.users && data.users.length) {
+        setUsers(data.users);
+        setLoading(false);
+        setError(null);
+      }
     } catch (error) {
+      setLoading(false);
       console.log(error);
       setError(error);
     }
   }
 
   useEffect(() => {
-    fetchListOfUsers;
+    fetchListOfUsers();
   }, []);
 
   return (
@@ -24,4 +35,4 @@ export default function SearchAutocomplete() {
   );
 }
 
-// RETURN TO VIDEO AT 3:40:10
+// RETURN TO VIDEO AT 3:42:10
