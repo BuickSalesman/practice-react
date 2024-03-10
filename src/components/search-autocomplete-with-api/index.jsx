@@ -13,7 +13,7 @@ export default function SearchAutocomplete() {
 
       console.log(data);
       if (data && data.users && data.users.length) {
-        setUsers(data.users);
+        setUsers(data.users.map((userItem) => userItem.firstName));
         setLoading(false);
         setError(null);
       }
@@ -27,6 +27,8 @@ export default function SearchAutocomplete() {
   useEffect(() => {
     fetchListOfUsers();
   }, []);
+
+  console.log(users);
 
   return (
     <div className="search-autocomplete-container">
