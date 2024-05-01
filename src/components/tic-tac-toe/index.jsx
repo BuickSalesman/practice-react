@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./styles.css";
 
 function Square({ value, onClick }) {
@@ -12,6 +12,7 @@ function Square({ value, onClick }) {
 export default function TicTacToe() {
   const [squares, setSquares] = useState(Array(9).fill(""));
   const [isXTurn, setIsXTurn] = useState(true);
+  const [status, setStatus] = useState("");
 
   function getWinner(squares) {
     const winningPatterns = [
@@ -38,11 +39,21 @@ export default function TicTacToe() {
 
   function handleClick(getCurrentSquare) {
     let copySquares = [...squares];
-    if (copySquares[getCurrentSquare]) return;
+    if (getWinner(copySquares) || copySquares[getCurrentSquare]) return;
     copySquares[getCurrentSquare] = isXTurn ? "X" : "O";
     setIsXTurn(!isXTurn);
     setSquares(copySquares);
   }
+
+  useEffect(() => {
+    if (!getWinner(squares) && squares.every((item) => item !== "")) {
+      setSquares("Draw!");
+    } else if (getWinner(squares)) {
+      setStatus(`Winner is ${getWinner(squares)}`);
+    } else {
+      setStatus(`Next player is ${isXTurn ? "X" : "O"}`);
+    }
+  }, [squares, isXTurn]);
 
   return (
     <div className="tic-tac-toe-container">
@@ -61,6 +72,7 @@ export default function TicTacToe() {
         <Square value={squares[7]} onClick={() => handleClick(7)} />
         <Square value={squares[8]} onClick={() => handleClick(8)} />
       </div>
+      <h1>{status}</h1>
     </div>
   );
 }
