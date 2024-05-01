@@ -45,11 +45,16 @@ export default function TicTacToe() {
     setSquares(copySquares);
   }
 
+  function handleRestart() {
+    setIsXTurn(true);
+    setSquares(Array(9).fill(""));
+  }
+
   useEffect(() => {
     if (!getWinner(squares) && squares.every((item) => item !== "")) {
-      setSquares("Draw!");
+      setStatus("Draw!");
     } else if (getWinner(squares)) {
-      setStatus(`Winner is ${getWinner(squares)}`);
+      setStatus(`Winner is ${getWinner(squares)}. Please play again!`);
     } else {
       setStatus(`Next player is ${isXTurn ? "X" : "O"}`);
     }
@@ -73,6 +78,7 @@ export default function TicTacToe() {
         <Square value={squares[8]} onClick={() => handleClick(8)} />
       </div>
       <h1>{status}</h1>
+      <button onClick={handleRestart}>Reset</button>
     </div>
   );
 }
