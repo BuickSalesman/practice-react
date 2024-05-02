@@ -58,7 +58,7 @@ function App() {
       {/* <SearchAutocomplete /> */}
 
       {/* Tic-Tac-Toe component  */}
-      <TicTacToe />
+      {/* <TicTacToe /> */}
     </div>
   );
 }
