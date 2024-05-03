@@ -14,6 +14,8 @@ import StarRating from "./components/star-rating";
 import TicTacToe from "./components/tic-tac-toe";
 import TreeView from "./components/tree-view";
 import menus from "./components/tree-view/data";
+import FeatureFlags from "./components/feature-flag";
+import FeatureFlagGlobalState from "./components/feature-flag/context";
 
 function App() {
   return (
@@ -59,6 +61,11 @@ function App() {
 
       {/* Tic-Tac-Toe component  */}
       {/* <TicTacToe /> */}
+
+      {/* Feature Flag Implementation */}
+      <FeatureFlagGlobalState>
+        <FeatureFlags />
+      </FeatureFlagGlobalState>
     </div>
   );
 }
