@@ -16,6 +16,7 @@ import TreeView from "./components/tree-view";
 import menus from "./components/tree-view/data";
 import FeatureFlags from "./components/feature-flag";
 import FeatureFlagGlobalState from "./components/feature-flag/context";
+import UseFetchHookTest from "./components/use-fetch/test";
 
 function App() {
   return (
@@ -63,9 +64,12 @@ function App() {
       {/* <TicTacToe /> */}
 
       {/* Feature Flag Implementation */}
-      <FeatureFlagGlobalState>
+      {/* <FeatureFlagGlobalState>
         <FeatureFlags />
-      </FeatureFlagGlobalState>
+      </FeatureFlagGlobalState> */}
+
+      {/* useFetch - Custom Hook */}
+      <UseFetchHookTest />
     </div>
   );
 }
