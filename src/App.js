@@ -17,6 +17,8 @@ import menus from "./components/tree-view/data";
 import FeatureFlags from "./components/feature-flag";
 import FeatureFlagGlobalState from "./components/feature-flag/context";
 import UseFetchHookTest from "./components/use-fetch/test";
+import UseOnclickOutsideTest from "./components/use-outside-click/test";
+import UseWindowResizeTest from "./components/use-window-resize/test";
 
 function App() {
   return (
@@ -68,8 +70,14 @@ function App() {
         <FeatureFlags />
       </FeatureFlagGlobalState> */}
 
-      {/* useFetch - Custom Hook */}
-      <UseFetchHookTest />
+      {/* useFetch - Custom Hook
+      <UseFetchHookTest /> */}
+
+      {/* Use OnClick Outside Hook Test */}
+      {/* <UseOnclickOutsideTest /> */}
+
+      {/* Use Widow Resize Hook Test */}
+      <UseWindowResizeTest />
     </div>
   );
 }
