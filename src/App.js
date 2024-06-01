@@ -20,6 +20,7 @@ import UseFetchHookTest from "./components/use-fetch/test";
 import UseOnclickOutsideTest from "./components/use-outside-click/test";
 import UseWindowResizeTest from "./components/use-window-resize/test";
 import ScrollToTopAndBottom from "./components/scroll-to-top-and-bottom";
+import ScrollToSection from "./components/scroll-to-top-and-bottom/scroll-to-section";
 
 function App() {
   return (
@@ -54,34 +55,37 @@ function App() {
       {/* Custome tabs component */}
       {/* <TabTest /> */}
 
-      {/* Custom Modal Component  */}
+      {/* Custom modal component  */}
       {/* <ModalTest /> */}
 
       {/* Github profile finder */}
       {/* <GithubProfileFinder /> */}
 
-      {/* Serch Autocomplete  */}
+      {/* Serch autocomplete  */}
       {/* <SearchAutocomplete /> */}
 
       {/* Tic-Tac-Toe component  */}
       {/* <TicTacToe /> */}
 
-      {/* Feature Flag Implementation */}
+      {/* Feature flag implementation */}
       {/* <FeatureFlagGlobalState>
         <FeatureFlags />
       </FeatureFlagGlobalState> */}
 
-      {/* useFetch - Custom Hook
+      {/* useFetch - custom hook
       <UseFetchHookTest /> */}
 
-      {/* Use OnClick Outside Hook Test */}
+      {/* Use OnClick outside hook test */}
       {/* <UseOnclickOutsideTest /> */}
 
-      {/* Use Widow Resize Hook Test */}
+      {/* Use widow resize hook test */}
       {/* <UseWindowResizeTest /> */}
 
-      {/* Scroll To Top And Bottom */}
-      <ScrollToTopAndBottom />
+      {/* Scroll to top and bottom */}
+      {/* <ScrollToTopAndBottom /> */}
+
+      {/* Scroll to section */}
+      <ScrollToSection />
     </div>
   );
 }
